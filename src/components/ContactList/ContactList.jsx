@@ -1,12 +1,6 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { persistor } from "../../redux/store";
 import Contact from "../Contact/Contact";
 const ContactList = () => {
-  useEffect(() => {
-    persistor.persist();
-  }, []);
-
   const contacts = useSelector((state) => state.contacts.items);
   const filter = useSelector((state) => state.filters.status);
   const filteredContacts = contacts.filter((contact) =>
