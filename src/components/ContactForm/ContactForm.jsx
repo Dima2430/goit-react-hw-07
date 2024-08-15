@@ -3,7 +3,7 @@ import { useId } from "react";
 import * as Yup from "yup";
 import { addContact } from "../../redux/contactsOps";
 import { useDispatch } from "react-redux";
-
+import css from "./ContactForm.module.css";
 const ContactForm = () => {
   const nameId = useId();
   const numberId = useId();
@@ -21,19 +21,21 @@ const ContactForm = () => {
         resetForm();
       }}
     >
-      <Form>
-        <div>
+      <Form className={css.form}>
+        <div className={css.formControl}>
           <label htmlFor={nameId}>Name</label>
           <Field type="text" name="name" id={nameId} />
           <ErrorMessage name="name" as="span" />
         </div>
 
-        <div>
+        <div className={css.formControl}>
           <label htmlFor={numberId}>Number</label>
           <Field type="text" name="number" id={numberId} />
           <ErrorMessage name="number" as="span" />
         </div>
-        <button type="submit">Add Contact</button>
+        <button className={css.button} type="submit">
+          Add Contact
+        </button>
       </Form>
     </Formik>
   );

@@ -1,0 +1,41 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #ddd; /* Use a light grey border for separation */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9; /* Slightly different background to highlight separation */
+}
+
+.contact:last-child {
+  border-bottom: none; /* Remove border from the last item to avoid double border */
+}
+
+.contact button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact button:hover {
+  background-color: #c82333;
+}
